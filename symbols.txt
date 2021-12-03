@@ -29,6 +29,11 @@ _
 &&
 ||
 ()
+>>
+<<
+==
++=
+-=
 ++
 --
 auto
@@ -65,3 +70,8 @@ volatile
 while
 main
 printf
+stdin
+stdout
+scanf
+fgets
+fputs
