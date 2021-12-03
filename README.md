@@ -1,3 +1,5 @@
+**Testé sous linux**
+
 # Movai code
 *Abus du préprocesseur C en do mineur*
 
