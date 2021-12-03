@@ -34,6 +34,7 @@ _
 ==
 +=
 -=
+*=
 ++
 --
 auto
@@ -75,3 +76,4 @@ stdout
 scanf
 fgets
 fputs
+_Bool

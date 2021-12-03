@@ -1,3 +1,5 @@
+#! /bin/python
+
 import os
 import random
 
@@ -9,7 +11,7 @@ substitution_dict = {}
 symbol_count = 1 # We start at 1 so we can safely name stuff in our code with latin As
 template = "#define {} {}"
 with open('symbols.txt','r') as symbols:
-    with open('magic.h','w') as magic_h:
+    with open('../magic.h','w') as magic_h:
         symbol = symbols.readline()                 
         while symbol:
             pattern = '{0:08b}'.format(symbol_count) #Converts count to binary
@@ -48,11 +50,11 @@ for main_line in main_array:
                     word = substitution_dict[word]
                 word_count = (word_count + 1) % words_per_line
             to_write_magic = to_write_magic + word + ("\n" if word_count == words_per_line - 1 and string_delimiter < 1 else " ")
-with open('magic.c','w') as magic_c:
+with open('../magic.c','w') as magic_c:
     magic_c.write(to_write_magic)
 
 #Compiles our magic code
-os.popen("gcc magic.c")
+os.popen("gcc ../magic.c -o ../a.out")
 
 
                                         
