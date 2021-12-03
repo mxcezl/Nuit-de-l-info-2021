@@ -13,5 +13,6 @@ body{
 
 *{
     --text-color-1: #0c0c0c;
-    --text-color-2: #008c8c
+    --text-color-2: #008c8c;
+    --text-color-3: #808080;
 }

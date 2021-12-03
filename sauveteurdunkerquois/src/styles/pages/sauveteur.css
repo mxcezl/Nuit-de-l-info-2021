@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 /*type text*/
@@ -23,9 +24,15 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: var(--text-color-2);
+    margin-bottom: 5px;
 }
 
-/*IDENTITE*/
+.bloc_text p{
+    margin-block: 0;
+    margin-bottom: 5px;
+}
+
+/*info-sauveteur*/
 
 #page-titre{
     margin-bottom: 20px;
@@ -52,9 +59,28 @@
 #image_profil{
     width: 385px;
     border-radius: 50px;
+    margin-bottom: 20px;
 }
 
 #dates{
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
+
+#info-droite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-color-3)
+}
+
+.date-format{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: var(--text-color-2);
+}
+
+
