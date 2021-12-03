@@ -124,8 +124,10 @@
     Seasonal eggs
     ................................................. */
 	$('.form-control').on('input', function () {
-		if ($('#name').val() == "Père"){
-			alert(1);
+		if ($('#name').val() == "Père" && $('#email').val() == "Noël"){
+			$('#message').css('background-image', 'url(images/papa_noel.png)');
+		}else{
+			$('#message').css('background-image', 'none');
 		}
 	});
 
