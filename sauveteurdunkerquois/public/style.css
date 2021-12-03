@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+*{
+    --text-color-1: #0c0c0c;
+    --text-color-2: #008c8c
+}
