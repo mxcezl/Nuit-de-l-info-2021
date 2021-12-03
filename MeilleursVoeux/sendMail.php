@@ -17,7 +17,7 @@
   $mail->Password   = "meilleursVoeux20?";
 
   $mail->IsHTML(true);
-  $mail->AddAddress($_POST['mail']);
+  $mail->AddAddress($_POST['email']);
   $mail->SetFrom("meilleurs voeux 2.0");
   $mail->AddCC("meilleursvoeux20@gmail.com");
   $mail->Subject = "Joyeuses Fetes !!";
