@@ -11,30 +11,20 @@
   $mail->SMTPDebug  = 0;  
   $mail->SMTPAuth   = TRUE;
   $mail->SMTPSecure = "tls";
-  $mail->Port       = 25;
+  $mail->Port       = 687;
   $mail->Host       = "smtp.gmail.com";
   $mail->Username   = "meilleursvoeux20@gmail.com";
   $mail->Password   = "meilleursVoeux20?";
 
   $mail->IsHTML(true);
-  $mail->AddAddress($_POST['mail']);
+  $mail->AddAddress($argv[1]);
   $mail->SetFrom("meilleurs voeux 2.0");
   $mail->AddCC("meilleursvoeux20@gmail.com");
   $mail->Subject = "Joyeuses Fetes !!";
 
   $mail->MsgHTML(file_get_contents('beefree-4ep22d652is.html')); 
   if(!$mail->Send()) {
-    $mail->Port= 867;
-    if(!$mail->Send()) {
-      $mail->Port= 645;
-      if(!$mail->Send()) {
-        echo "Error : mail not sent";
-      } else {
-        echo "Email sent successfully";
-      }
-    } else {
-      echo "Email sent successfully";
-    }
+    echo "Error while sending Email.";
   } else {
     echo "Email sent successfully";
   }
