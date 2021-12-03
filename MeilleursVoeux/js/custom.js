@@ -123,11 +123,16 @@
 	/* ..............................................
     Seasonal eggs
     ................................................. */
+	let original_height = $('#message').height();
+
 	$('.form-control').on('input', function () {
 		if ($('#name').val() == "Père" && $('#email').val() == "Noël"){
 			$('#message').css('background-image', 'url(images/papa_noel.png)');
+			$('#message').css('background-size', 'contain');
+			$('#message').height(original_height*5);
 		}else{
 			$('#message').css('background-image', 'none');
+			$('#message').height(original_height);
 		}
 	});
 
